@@ -1,37 +1,68 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="17" x="341" y="104">
+  <block type="robot_delay" id="132" inline="true" x="-218" y="-4"></block>
+  <block type="movement_reverse" id="120" x="-121" y="19"></block>
+  <block type="movement_forward" id="107" x="349" y="44">
     <next>
-      <block type="oled_setcursor" id="26" inline="true">
-        <value name="STARTX">
-          <block type="math_number" id="68">
-            <field name="NUM">2</field>
-          </block>
-        </value>
-        <value name="STARTY">
-          <block type="math_number" id="69">
-            <field name="NUM">10</field>
+      <block type="robot_delay" id="109" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="110">
+            <field name="NUM">0</field>
           </block>
         </value>
         <next>
-          <block type="oled_drawtext" id="94">
-            <field name="TEXT">1234-1000=</field>
+          <block type="oled_cleardisplay" id="17">
             <next>
-              <block type="oled_drawnumber" id="61" inline="true">
-                <value name="NUMBER">
-                  <block type="math_arithmetic" id="85" inline="true">
-                    <field name="OP">MINUS</field>
-                    <value name="A">
-                      <block type="math_number" id="95">
-                        <field name="NUM">1234</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="97">
-                        <field name="NUM">1000</field>
-                      </block>
-                    </value>
+              <block type="oled_setcursor" id="26" inline="true">
+                <value name="STARTX">
+                  <block type="math_number" id="68">
+                    <field name="NUM">2</field>
                   </block>
                 </value>
+                <value name="STARTY">
+                  <block type="math_number" id="69">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="oled_drawtext" id="94">
+                    <field name="TEXT">123456888908875-10001234567=</field>
+                    <next>
+                      <block type="oled_drawnumber" id="61" inline="true">
+                        <value name="NUMBER">
+                          <block type="math_arithmetic" id="85" inline="true">
+                            <field name="OP">MINUS</field>
+                            <value name="A">
+                              <block type="math_number" id="95">
+                                <field name="NUM">123456888908875</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="97">
+                                <field name="NUM">10001234567</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="movement_reverse" id="130">
+                            <next>
+                              <block type="robot_delay" id="134" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="142">
+                                    <field name="NUM">5000</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="movement_stop" id="152"></block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
