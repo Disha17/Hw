@@ -13,22 +13,27 @@
           </block>
         </value>
         <next>
-          <block type="oled_drawnumber" id="61" inline="true">
-            <value name="NUMBER">
-              <block type="math_arithmetic" id="85" inline="true">
-                <field name="OP">ADD</field>
-                <value name="A">
-                  <block type="math_number" id="70">
-                    <field name="NUM">7</field>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="math_number" id="71">
-                    <field name="NUM">8</field>
+          <block type="oled_drawtext" id="94">
+            <field name="TEXT">7+8=</field>
+            <next>
+              <block type="oled_drawnumber" id="61" inline="true">
+                <value name="NUMBER">
+                  <block type="math_arithmetic" id="85" inline="true">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="math_number" id="70">
+                        <field name="NUM">7</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="71">
+                        <field name="NUM">8</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
               </block>
-            </value>
+            </next>
           </block>
         </next>
       </block>
