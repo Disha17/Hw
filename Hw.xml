@@ -4,7 +4,7 @@
       <block type="oled_setcursor" id="26" inline="true">
         <value name="STARTX">
           <block type="math_number" id="68">
-            <field name="NUM">1222</field>
+            <field name="NUM">2</field>
           </block>
         </value>
         <value name="STARTY">
@@ -14,7 +14,7 @@
         </value>
         <next>
           <block type="oled_drawtext" id="35">
-            <field name="TEXT">500+400</field>
+            <field name="TEXT">2+2=</field>
             <next>
               <block type="oled_drawnumber" id="61" inline="true">
                 <value name="NUMBER">
