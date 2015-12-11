@@ -3,9 +3,9 @@
   <block type="movement_reverse" id="2" x="-121" y="19"></block>
   <block type="movement_forward" id="3" x="341" y="11">
     <next>
-      <block type="robot_delay" id="20" inline="true">
+      <block type="robot_delay" id="4" inline="true">
         <value name="DELAY">
-          <block type="math_number" id="27">
+          <block type="math_number" id="5">
             <field name="NUM">5000</field>
           </block>
         </value>
@@ -44,7 +44,7 @@
                           </block>
                         </value>
                         <next>
-                          <block type="movement_stop" id="16"></block>
+                          <block type="movement_stop" id="15"></block>
                         </next>
                       </block>
                     </next>
