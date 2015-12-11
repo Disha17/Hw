@@ -3,41 +3,46 @@
   <block type="movement_reverse" id="2" x="-121" y="19"></block>
   <block type="movement_forward" id="3" x="341" y="11">
     <next>
-      <block type="oled_cleardisplay" id="6">
+      <block type="robot_delay" id="20" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="27">
+            <field name="NUM">5000</field>
+          </block>
+        </value>
         <next>
-          <block type="oled_setcursor" id="7" inline="true">
-            <value name="STARTX">
-              <block type="math_number" id="8">
-                <field name="NUM">2</field>
-              </block>
-            </value>
-            <value name="STARTY">
-              <block type="math_number" id="9">
-                <field name="NUM">10</field>
-              </block>
-            </value>
+          <block type="oled_cleardisplay" id="6">
             <next>
-              <block type="oled_drawtext" id="10">
-                <field name="TEXT">123456888908875-10001234567=</field>
+              <block type="oled_setcursor" id="7" inline="true">
+                <value name="STARTX">
+                  <block type="math_number" id="8">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+                <value name="STARTY">
+                  <block type="math_number" id="9">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
                 <next>
-                  <block type="oled_drawnumber" id="11" inline="true">
-                    <value name="NUMBER">
-                      <block type="math_arithmetic" id="12" inline="true">
-                        <field name="OP">MINUS</field>
-                        <value name="A">
-                          <block type="math_number" id="13">
-                            <field name="NUM">123456888908875</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="14">
-                            <field name="NUM">10001234567</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
+                  <block type="oled_drawtext" id="10">
+                    <field name="TEXT">123456888908875-10001234567=</field>
                     <next>
-                      <block type="movement_reverse" id="15">
+                      <block type="oled_drawnumber" id="11" inline="true">
+                        <value name="NUMBER">
+                          <block type="math_arithmetic" id="12" inline="true">
+                            <field name="OP">MINUS</field>
+                            <value name="A">
+                              <block type="math_number" id="13">
+                                <field name="NUM">123456888908875</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="14">
+                                <field name="NUM">10001234567</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
                         <next>
                           <block type="movement_stop" id="16"></block>
                         </next>
